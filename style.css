@@ -1,20 +1,18 @@
-
-
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
 
 
-h1{
+h1 {
     color: rgb(250, 223, 197);
     text-align: center;
     padding-bottom: 15px;
     border-radius: 20px;
-    font-size:25px;
+    font-size: 25px;
     letter-spacing: 1px;
 
 }
@@ -22,49 +20,67 @@ h1{
 /* Full page background */
 body {
     margin: 0;
+
     min-height: 100vh;
-    background: url("Orange BG.png") center/cover no-repeat;
+
+    background: url("Orange BG.png") center center/cover no-repeat;
+
+    background-attachment: fixed;
+
     display: flex;
+
     justify-content: center;
+
     align-items: flex-start;
-    padding: 40px 0;
+
+    padding: 20px;
+
+    box-sizing: border-box;
 }
 
 /* Glassmorphism Quiz Box */
 .quiz-box {
-    width: 600px;
+
+    width: min(600px, 100%);
+
+    max-width: 100%;
 
     min-height: 450px;
 
-    max-height: 90vh;
+    max-height: calc(100vh - 40px);
 
     overflow-y: auto;
 
-    padding: 30px;
+    padding: 25px;
+
+    box-sizing: border-box;
 
     border-radius: 20px;
 
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, .05);
 
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, .2);
 
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .3);
 
     color: white;
 
     text-align: center;
+
 }
 
-.button{
+
+.button {
     width: 10px;
     height: 10px;
     padding: 10px;
     margin: 10px;
 
 }
+
 .option {
     display: block;
     width: 100%;
@@ -74,7 +90,7 @@ body {
     border-radius: 20px;
 
     background: rgba(255, 255, 255, 0.2);
-    color: white ;
+    color: white;
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
@@ -87,7 +103,8 @@ body {
     background: rgba(255, 255, 255, 0.40);
     transform: scale(1.02);
 }
-.option:disabled{
+
+.option:disabled {
     cursor: no-drop;
 }
 
@@ -102,72 +119,71 @@ body {
     outline-offset: 1px;
 }
 
-#nextBtn{
-    margin-top:20px;
-    padding:12px 25px;
-    border:solid rgba(255, 255, 255, 0.2);
-    border-radius:25px;
-    cursor:pointer;
+#nextBtn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.2);
-    color:white;
-    font-size:18px;
+    color: white;
+    font-size: 18px;
 }
 
-#nextBtn:hover{
+#nextBtn:hover {
 
-    background:rgba(255, 255, 255, 0.40);
+    background: rgba(255, 255, 255, 0.40);
 }
 
-#nextBtn:active{
+#nextBtn:active {
     transform: scale(0.95);
 }
 
-.score-board{
+.score-board {
 
-    text-align:center;
+    text-align: center;
 
-    padding:35px;
+    padding: 35px;
 
-    margin-top:20px;
-
-}
-
-.score-board h2{
-
-    color:black;
-
-    margin-bottom:40px;
+    margin-top: 20px;
 
 }
 
-.score-board p{
+.score-board h2 {
 
-    font-size:20px;
+    color: black;
 
-    margin:15px 0;
+    margin-bottom: 40px;
 
 }
 
-.score-board button{
+.score-board p {
 
-    margin-top:20px;
-    padding:12px 25px;
-    border:solid rgba(255, 255, 255, 0.2);
-    border-radius:25px;
-    cursor:pointer;
+    font-size: 20px;
+
+    margin: 15px 0;
+
+}
+
+.score-board button {
+
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.2);
-    color:white;
-    font-size:18px
+    color: white;
+    font-size: 18px
+}
+
+.score-board button:hover {
+
+    background: rgba(255, 255, 255, 0.40);
 
 }
 
-.score-board button:hover{
-
-    background:rgba(255, 255, 255, 0.40);
-
-}
-
-.score-board button:active{
+.score-board button:active {
     transform: scale(0.95);
 }
 
@@ -176,12 +192,12 @@ body {
 /* SURVEY TITLE */
 /* ========================= */
 
-.survey-title{
+.survey-title {
     text-align: center;
     font-family: 'Syncopate', sans-serif;
     font-size: 30px;
     color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     letter-spacing: 2px;
 }
 
@@ -189,7 +205,7 @@ body {
 /* SURVEY QUESTION */
 /* ========================= */
 
-#surveyQuestion{
+#surveyQuestion {
     width: 100%;
     min-height: 80px;
 
@@ -204,20 +220,20 @@ body {
     font-weight: bold;
     line-height: 1.0;
 
-    margin-bottom:15px;
+    margin-bottom: 15px;
 
     padding: 15px;
 
     border-radius: 20px;
 
-    background: rgba(255,255,255,0.10);
+    background: rgba(255, 255, 255, 0.10);
 }
 
 /* ========================= */
 /* ANSWER AREA */
 /* ========================= */
 
-#surveyAnswers{
+#surveyAnswers {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -227,7 +243,7 @@ body {
 /* SURVEY BUTTONS */
 /* ========================= */
 
-.surveyBtn{
+.surveyBtn {
 
     width: 100%;
 
@@ -237,7 +253,7 @@ body {
 
     border-radius: 20px;
 
-    background: rgba(255,255,255,0.18);
+    background: rgba(255, 255, 255, 0.18);
 
     color: white;
 
@@ -249,9 +265,9 @@ body {
 
 }
 
-.surveyBtn:hover{
+.surveyBtn:hover {
 
-    background: rgba(255,255,255,.35);
+    background: rgba(255, 255, 255, .35);
 
     transform: scale(0.95);
 
@@ -259,33 +275,32 @@ body {
 
 /* Selected Option */
 
-.surveyBtn.selected{
+.surveyBtn.selected {
 
-    background:  rgba(255,255,255,.35);
+    background: rgba(255, 255, 255, .35);
     transform: scale(0.95)
-
 }
 
 /* ========================= */
 /* NEXT BUTTON */
 /* ========================= */
 
-#surveyNext{
+#surveyNext {
 
-    margin-top:20px;
-    padding:12px 25px;
-    border:solid rgba(255, 255, 255, 0.2);
-    border-radius:25px;
-    cursor:pointer;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.2);
-    color:white;
-    font-size:18px;
+    color: white;
+    font-size: 18px;
 
 }
 
-#surveyNext:hover{
+#surveyNext:hover {
 
-    background:rgba(255, 255, 255, 0.40);
+    background: rgba(255, 255, 255, 0.40);
 
     transform: scale(0.95);
 
@@ -295,47 +310,46 @@ body {
 /* THANK YOU PAGE */
 /* ========================= */
 
-.survey-result{
+.survey-result {
 
-    text-align:center;
+    text-align: center;
 
-    padding:20px;
+    padding: 20px;
 
-    margin-top:15px;
-
-}
-
-.survey-result h2{
-
-    text-align:center;
-
-    padding:35px;
-
-    margin-top:20px;
+    margin-top: 15px;
 
 }
 
+.survey-result h2 {
 
-.survey-result button{
+    text-align: center;
 
-    margin-top:20px;
-    padding:12px 25px;
-    border:solid rgba(255, 255, 255, 0.2);
-    border-radius:25px;
-    cursor:pointer;
+    padding: 35px;
+
+    margin-top: 20px;
+
+}
+
+
+.survey-result button {
+
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.2);
-    color:white;
-    font-size:18px
+    color: white;
+    font-size: 18px
+}
+
+.survey-result button:hover {
+
+    background: rgba(255, 255, 255, 0.40);
 
 }
 
-.survey-result button:hover{
-
-    background:rgba(255, 255, 255, 0.40);
-
-}   
-
-#playAgainBtn{
+#playAgainBtn {
 
     display: block;
 
@@ -361,57 +375,22 @@ body {
 
 }
 
-#playAgainBtn:hover{
+#playAgainBtn:hover {
 
     background: rgba(255, 255, 255, 0.40);
 
     transform: scale(0.95);
 
 }
-.result-card{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:20px;
-    margin:10px 0;
-    padding:15px 15px;
-    border-radius:20px;
-    background:rgba(255,255,255,.15);
-
-}
-
-.question-no{
-
-    font-size:18px;
-
-    font-weight:bold;
-
-}
-
-.answer{
-
-    font-size:18px;
-
-    white-space:pre-wrap;
-
-    word-wrap:break-word;
-
-    overflow-wrap:break-word;
-
-    text-align:right;
-
-    max-width:65%;
 
 
-}
-.quiz-box::-webkit-scrollbar{
+.quiz-box::-webkit-scrollbar {
 
     width: 15px;
 
 }
 
-.quiz-box::-webkit-scrollbar-track{
+.quiz-box::-webkit-scrollbar-track {
 
     background: transparent;
 
@@ -421,9 +400,9 @@ body {
 
 }
 
-.quiz-box::-webkit-scrollbar-thumb{
+.quiz-box::-webkit-scrollbar-thumb {
 
-    background: rgba(255,255,255,.35);
+    background: rgba(255, 255, 255, .35);
 
     border-radius: 20px;
 
@@ -433,157 +412,265 @@ body {
 
 }
 
-.quiz-box::-webkit-scrollbar-thumb:hover{
+.quiz-box::-webkit-scrollbar-thumb:hover {
 
-    background: rgba(255,255,255,.6);
+    background: rgba(255, 255, 255, .6);
 
     background-clip: content-box;
 
 }
-#otherAnswer{
 
-    width:100%;
+#otherAnswer {
 
-    margin-top:15px;
+    width: 100%;
 
-    padding:15px;
+    margin-top: 15px;
 
-    border:1px solid rgba(255,255,255,.3);
+    padding: 15px;
 
-    border-radius:20px;
+    border: 1px solid rgba(255, 255, 255, .3);
 
-    background:rgba(255,255,255,.2);
+    border-radius: 20px;
 
-    color:white;
+    background: rgba(255, 255, 255, .2);
 
-    font-size:18px;
+    color: white;
 
-    box-sizing:border-box;
+    font-size: 18px;
 
-}
-
-#otherAnswer::placeholder{
-
-    color:rgba(255,255,255,.4);
+    box-sizing: border-box;
 
 }
 
-#otherAnswer:focus{
+#otherAnswer::placeholder {
 
-    outline:none;
+    color: rgba(255, 255, 255, .4);
 
-    border-color:rgba(255,255,255,.4);
+}
+
+#otherAnswer:focus {
+
+    outline: none;
+
+    border-color: rgba(255, 255, 255, .4);
 
 
 }
+
 /* ========================= */
 /* MOBILE RESPONSIVE DESIGN */
 /* ========================= */
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
 
-    body{
+    body {
+
         padding: 20px 10px;
-        align-items: flex-start;
+
     }
 
-    .quiz-box{
+    .quiz-box {
 
         width: 95%;
+
         max-width: 95%;
-
-        padding: 20px;
-
-        border-radius: 18px;
 
         min-height: auto;
 
         max-height: 90vh;
 
-        overflow-y: auto;
+        padding: 20px;
 
-        box-sizing: border-box;
+        margin: 20px auto;
 
     }
 
-    h1{
+    h1 {
 
-        font-size: 28px;
-
-        margin-bottom: 20px;
+        font-size: 30px;
 
     }
 
     #question,
-    #surveyQuestion{
+    #surveyQuestion {
 
-        font-size: 20px;
+        font-size: 22px;
 
-        line-height: 1.5;
+        line-height: 1.6;
 
-        padding: 10px;
+        word-break: break-word;
 
     }
 
     .option,
-    .surveyBtn{
-
-        width: 100%;
-
-        padding: 15px;
+    .surveyBtn,
+    #nextBtn,
+    #surveyNext,
+    #playAgainBtn {
 
         font-size: 16px;
+
+        padding: 15px;
 
         margin: 8px 0;
 
     }
 
-    #otherAnswer{
+    #otherAnswer {
 
         width: 100%;
 
-        padding: 15px;
-
         font-size: 16px;
+
+        padding: 15px;
 
         box-sizing: border-box;
 
     }
 
-    #nextBtn,
-    #surveyNext,
-    #playAgainBtn{
+    .score-board h2,
+    .survey-result h2 {
 
-        width: 100%;
+        font-size: 28px;
+
+    }
+
+    .survey-result h2 {
+
+        text-align: center;
+
+        margin: 20px 0;
+
+        padding: 10px;
+
+        font-size: clamp(24px, 5vw, 36px);
+
+    }
+
+    .score-board h3 {
+
+        font-size: 22px;
+
+    }
+
+    .score-board p,
+    .survey-result p {
+
+        font-size: 18px;
+
+    }
+
+    .result-card {
 
         padding: 15px;
 
-        font-size: 17px;
-
-        margin-top: 20px;
-
     }
 
-    .result-card{
+}
 
-        flex-direction: column;
+.result-card {
 
-        align-items: flex-start;
+    display: flex;
 
-        text-align: left;
+    flex-direction: column;
 
-        gap: 10px;
+    align-items: flex-start;
 
-    }
+    gap: 10px;
 
-    .answer{
+    margin: 15px 0;
 
-        max-width: 100%;
+    padding: 18px;
 
-        text-align: left;
+    border-radius: 12px;
 
-        word-break: break-word;
+    background: rgba(255, 255, 255, 0.12);
 
-    }
+    box-sizing: border-box;
+
+}
+
+.question-no {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #FFD700;
+
+}
+
+.answer {
+
+    width: 100%;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    text-align: left;
+
+    white-space: normal;
+
+    word-break: break-word;
+
+    overflow-wrap: anywhere;
+
+}
+
+/* Survey page only */
+.survey-title {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+}
+
+#surveyQuestion {
+
+    font-size: 18px;
+
+    padding: 10px;
+
+    margin-bottom: 8px;
+
+    min-height: auto;
+
+}
+
+#surveyAnswers {
+
+    gap: 5px;
+
+}
+
+.surveyBtn {
+
+    padding: 12px;
+
+    margin: 2px 0;
+
+    font-size: 16px;
+
+}
+
+#otherAnswer {
+
+    padding: 12px;
+
+    margin-top: 8px;
+
+    font-size: 16px;
+
+}
+
+#surveyNext {
+
+    margin-top: 12px;
+
+    padding: 12px;
+
+}
 
 }
