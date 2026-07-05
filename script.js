@@ -1,6 +1,9 @@
 
 
 
+
+
+
 const quiz = [
     {
         question: "What is my fav thing in ME? ",
@@ -14,22 +17,22 @@ const quiz = [
     },
     {
         question: "What is my fav Food?",
-        answers: [ "Biriyani", "Chicken Rice","Beef Rice","Nooddles"],
+        answers: ["Biriyani", "Chicken Rice", "Beef Rice", "Nooddles"],
         correct: 1
     },
     {
         question: "Waht I like most?",
-        answers: ["Nature","Animals","Birads","fishes" ],
+        answers: ["Nature", "Animals", "Birads", "fishes"],
         correct: 1
     },
     {
         question: "What make me happy ?",
-        answers: [ "Your Voice", "Your Behaviour", "Your Thighs", "Your Smile"],
+        answers: ["Your Voice", "Your Behaviour", "Your Thighs", "Your Smile"],
         correct: 3
     },
     {
         question: "What I can't control abt YOU?",
-        answers: ["Hanger" , "Structure", "Smile", "Behaviour"],
+        answers: ["Hanger", "Structure", "Smile", "Behaviour"],
         correct: 2
     },
     {
@@ -39,17 +42,17 @@ const quiz = [
     },
     {
         question: "Which one I like to eat first?",
-        answers: [ "Sweet", "Juice", "Hot", "Desert"],
+        answers: ["Sweet", "Juice", "Hot", "Desert"],
         correct: 2
     },
     {
         question: "Where I like to build House?",
-        answers: [ "Appartments", "City", "Secluded", "Village"],
+        answers: ["Appartments", "City", "Secluded", "Village"],
         correct: 2
     },
     {
         question: "What I like to drive?",
-        answers: [ "Bike", "Car", "Scooty", "Cycle"],
+        answers: ["Bike", "Car", "Scooty", "Cycle"],
         correct: 1
     }
 ];
@@ -141,7 +144,7 @@ nextBtn.addEventListener("click", function () {
             </div>
         `;
 
-       document.getElementById("continueBtn").addEventListener("click", startSurvey);
+        document.getElementById("continueBtn").addEventListener("click", startSurvey);
 
     }
 
@@ -154,43 +157,43 @@ loadQuestion();
 const survey = [
     {
         question: "Which place do you like most?",
-        answers: ["Canada","Germany","Switzerland","Jerusalem"]
+        answers: ["Canada", "Germany", "Switzerland", "Jerusalem"]
     },
     {
         question: "What makes YOU fall with me recent days?",
-        answers: ["Look","Charector","Smile","Kindness"]
+        answers: ["Look", "Charector", "Smile", "Kindness"]
     },
     {
         question: "What makes YOU happpy?",
-        answers: ["Night Out","Food Date","Outing","Bike Ride"]
+        answers: ["Night Out", "Food Date", "Outing", "Bike Ride"]
     },
     {
         question: "Where YOU want go  with ME?",
-        answers: ["Iceland","World Trip","Night Out","Church"]
+        answers: ["Iceland", "World Trip", "Night Out", "Church"]
     },
     {
         question: "Why YOU love ME most?",
-        answers: ["Kindness","Just For ME","For My Love","Behaviour"]
+        answers: ["Kindness", "Just For ME", "For My Love", "Behaviour"]
     },
     {
         question: "What is your fav Habby?",
-        answers: ["Singing","Dancing","Play W Pets","Drawing"]
+        answers: ["Singing", "Dancing", "Play W Pets", "Drawing"]
     },
     {
         question: "How was your day gone while met ME?",
-        answers: ["GOOD","Unforgettable","Happy","Memory"]
+        answers: ["GOOD", "Unforgettable", "Happy", "Memory"]
     },
     {
         question: "What you love most?",
-        answers: ["Animals","Brids","Fishes","Pets"]
+        answers: ["Animals", "Brids", "Fishes", "Pets"]
     },
     {
         question: "How YOU imagine our marriage?",
-        answers: ["Grant","Normal","Everyone Talk ABT","Like WE imagine"]
+        answers: ["Grant", "Normal", "Everyone Talk ABT", "Like WE imagine"]
     },
     {
         question: "Where is our Honeymoon?",
-        answers: ["Other country","Ooty","Iceland","Our new Home"]
+        answers: ["Other country", "Ooty", "Iceland", "Our new Home"]
     }
 ];
 
@@ -198,7 +201,7 @@ let surveyIndex = 0;
 let surveyAnswers = [];
 let selectedOption = -1;
 
-function startSurvey(){
+function startSurvey() {
 
     document.querySelector(".quiz-box").innerHTML = `
 
@@ -229,17 +232,17 @@ function startSurvey(){
 
 document.getElementById("otherAnswer").value = "";
 
-document.getElementById("otherAnswer").oninput = function(){
+document.getElementById("otherAnswer").oninput = function () {
 
     selectedOption = -1;
 
-    surveyBtns.forEach(btn=>{
-        btn.style.background="rgba(255,255,255,.2)";
+    surveyBtns.forEach(btn => {
+        btn.style.background = "rgba(255,255,255,.2)";
     });
 
 };
 
-function loadSurvey(){
+function loadSurvey() {
 
     selectedOption = -1;
 
@@ -248,21 +251,21 @@ function loadSurvey(){
 
     const surveyBtns = document.querySelectorAll(".surveyBtn");
 
-    surveyBtns.forEach((btn,index)=>{
+    surveyBtns.forEach((btn, index) => {
 
         btn.innerHTML = survey[surveyIndex].answers[index];
 
         btn.style.background = "rgba(255,255,255,.2)";
 
-        btn.onclick = function(){
+        btn.onclick = function () {
 
             selectedOption = index;
 
-            surveyBtns.forEach(b=>{
-                b.style.background="rgba(255,255,255,.2)";
+            surveyBtns.forEach(b => {
+                b.style.background = "rgba(255,255,255,.2)";
             });
 
-            btn.style.background="green";
+            btn.style.background = "green";
 
         };
 
@@ -277,45 +280,45 @@ function nextSurvey() {
     const otherInput = document.getElementById("otherAnswer").value.trim();
 
     // User typed a custom answer
-  let answer = "";
+    let answer = "";
 
-if (selectedOption !== -1) {
-    answer = survey[surveyIndex].answers[selectedOption];
-}
-
-if (otherInput !== "") {
-
-    if (answer !== "") {
-        answer += "<br><strong>Other:</strong> " + otherInput;
-    } else {
-        answer = otherInput;
+    if (selectedOption !== -1) {
+        answer = survey[surveyIndex].answers[selectedOption];
     }
 
-}
+    if (otherInput !== "") {
 
-if (answer === "") {
+        if (answer !== "") {
+            answer += "<br><strong>Other:</strong> " + otherInput;
+        } else {
+            answer = otherInput;
+        }
 
-    alert("Please choose an option or type!");
+    }
 
-    return;
+    if (answer === "") {
 
-}
+        alert("Please choose an option or type!");
 
-surveyAnswers.push(answer);
+        return;
 
-surveyIndex++;
+    }
 
-if (surveyIndex < survey.length) {
+    surveyAnswers.push(answer);
 
-    loadSurvey();
+    surveyIndex++;
 
-} 
+    if (surveyIndex < survey.length) {
+
+        loadSurvey();
+
+    }
     else {
 
         let html = `
         <div class="survey-result">
 
-            <h2>❤️Thank You❤️</h2>
+            <h2>Thank You❤️</h2>
         `;
 
         surveyAnswers.forEach((ans, i) => {
