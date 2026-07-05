@@ -1,9 +1,3 @@
-
-
-
-
-
-
 const quiz = [
     {
         question: "What is my fav thing in ME? ",
